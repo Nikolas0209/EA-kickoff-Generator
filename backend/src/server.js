@@ -1,13 +1,11 @@
-import { connectDB } from './db.js';
+import express from 'express';
+import getCollection from './utils/getCollection.js';
 
 const app = express();
 
 app.get('/countries', async (req, res) => {
   try{
-    const db = await connectDB();
-    const collection = db.collection('countries');
-
-    const teams = await collection.find().toArray();
+    const teams = await getCollection('countries');
 
     const homeTeamIndex = Math.floor(Math.random() * teams.length);
     const homeTeam = teams[homeTeamIndex];
@@ -33,10 +31,7 @@ app.get('/countries', async (req, res) => {
 
 app.get('/countries/ratings', async (req, res) => {
   try{
-    const db = await connectDB();
-    const collection = db.collection('countries');
-
-    const teams = await collection.find().toArray();
+    const teams = await getCollection('countries');
 
     const homeTeamIndex = Math.floor(Math.random() * teams.length);
     const homeTeam = teams[homeTeamIndex];
