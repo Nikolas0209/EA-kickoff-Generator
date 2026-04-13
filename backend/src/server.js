@@ -1,4 +1,3 @@
-import express from "express";
 import { connectDB } from './db.js';
 
 const app = express();
@@ -32,8 +31,43 @@ app.get('/countries', async (req, res) => {
   }
 });
 
-app.get('/about', (req, res) => {
-  res.send('This is the route page')
+app.get('/countries/ratings', async (req, res) => {
+  try{
+    const db = await connectDB();
+    const collection = db.collection('countries');
+
+    const teams = await collection.find().toArray();
+
+    const homeTeamIndex = Math.floor(Math.random() * teams.length);
+    const homeTeam = teams[homeTeamIndex];
+
+    const getAllRatings = teams.map(team => team.stars);
+    const lowestStarsTeam = Math.min(...getAllRatings);
+
+    const maxRating = homeTeam.stars + 1;
+    const minRating = Math.max(homeTeam.stars - 1, lowestStarsTeam);
+
+    const teamRating = teams.filter(team => 
+     team.stars >= minRating && team.stars <= maxRating 
+    );
+
+    let eligibleAwayTeams = teamRating.filter(team => team._id !== homeTeam._id);
+
+    if(eligibleAwayTeams.length === 0){
+      eligibleAwayTeams = teamRating;
+    };
+
+    const awayTeam = eligibleAwayTeams[Math.floor(Math.random() * eligibleAwayTeams.length)];
+
+    const kickOffTeams = {
+      homeTeam,
+      awayTeam
+    };
+
+    res.status(200).json(kickOffTeams);
+  }catch(error){
+    res.status(500).json({error: 'The kick-off could not be generated.'});
+  }
 })
 
 app.listen(3000, () => {
