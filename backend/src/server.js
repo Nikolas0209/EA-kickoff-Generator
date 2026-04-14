@@ -10,13 +10,8 @@ app.get('/countries', async (req, res) => {
     const homeTeamIndex = Math.floor(Math.random() * teams.length);
     const homeTeam = teams[homeTeamIndex];
 
-    let awayTeamIndex = Math.floor(Math.random() * teams.length);
-
-    while(awayTeamIndex === homeTeamIndex){
-      awayTeamIndex = Math.floor(Math.random() * teams.length);
-    };
-
-    const awayTeam = teams[awayTeamIndex];
+    const availableTeams = teams.filter(team => team._id !== homeTeam._id);
+    const awayTeam = availableTeams[Math.floor(Math.random() * availableTeams.length)]; 
 
     const kickOffTeams = {
       homeTeam,
