@@ -60,4 +60,17 @@ router.get('/ratings', async (req, res) => {
   }
 });
 
+router.get('/random-team', async (req, res) => {
+  try{
+    const teams = await getCollection('countries');
+
+    const randomTeamIndex = Math.floor(Math.random() * teams.length);
+    const randomTeam = teams[randomTeamIndex];
+
+    res.status(200).json(randomTeam);
+  } catch(error){
+    res.status(500).json({error: 'The kick-off could not be generated.'})
+  }
+})
+
 export default router;
