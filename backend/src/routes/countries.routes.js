@@ -1,14 +1,13 @@
 import express from 'express';
 import getCollection from '../utils/getCollection.js';
+import getRandomTeam from '../utils/getRandomTeam.js';
 
 const router = express.Router();
 
 router.get('/', async (req, res) => {
   try{
     const teams = await getCollection('countries');
-
-    const homeTeamIndex = Math.floor(Math.random() * teams.length);
-    const homeTeam = teams[homeTeamIndex];
+    const homeTeam = getRandomTeam(teams);
 
     const availableTeams = teams.filter(team => team._id !== homeTeam._id);
     const awayTeam = availableTeams[Math.floor(Math.random() * availableTeams.length)]; 
@@ -27,9 +26,7 @@ router.get('/', async (req, res) => {
 router.get('/ratings', async (req, res) => {
   try{
     const teams = await getCollection('countries');
-
-    const homeTeamIndex = Math.floor(Math.random() * teams.length);
-    const homeTeam = teams[homeTeamIndex];
+    const homeTeam = getRandomTeam(teams);
 
     const getAllRatings = teams.map(team => team.stars);
     const lowestStarsTeam = Math.min(...getAllRatings);
@@ -63,14 +60,12 @@ router.get('/ratings', async (req, res) => {
 router.get('/random-team', async (req, res) => {
   try{
     const teams = await getCollection('countries');
+    const randomTeam = getRandomTeam(teams);
 
-    const randomTeamIndex = Math.floor(Math.random() * teams.length);
-    const randomTeam = teams[randomTeamIndex];
-
-    res.status(200).json(randomTeam);
+    res.status(200).json({team: randomTeam});
   } catch(error){
-    res.status(500).json({error: 'The kick-off could not be generated.'})
+    res.status(500).json({error: 'The kick-off could not be generated.'});
   }
-})
+});
 
 export default router;
