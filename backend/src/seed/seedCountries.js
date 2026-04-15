@@ -1,15 +1,13 @@
-import { connectDB } from "./db.js";
+import { connectDB } from "../db.js";
 
-async function seedCountries() {
+async function seedCountries(){
   let db;
-  try {
+  try{
     db = await connectDB();
-    if (!db) {
-      console.log("❌ Database connection failed");
+    if (!db){
+      console.log("Database connection failed");
       return;
     }
-
-    console.log("✅ Database is connected!");
 
     const countries = db.collection('countries');
 
@@ -146,19 +144,19 @@ async function seedCountries() {
       }
     ];
 
-    for (const doc of docs) {
+    for(const doc of docs){
       await countries.updateOne(
-        { country: doc.country }, // match by country
-        { $set: doc },            // update fields
-        { upsert: true }          // insert if not found
+        {country: doc.country}, // match by country
+        {$set: doc},            // update fields
+        {upsert: true}          // insert if not found
       );
     }
 
     console.log('Seeded countries successfully!');
-  } catch (err) {
+  } catch(err){
     console.error('Seeding failed:', err);
   } finally {
-    if (db) {
+    if(db){
       await db.client.close(); // close connection safely
       console.log('Database connection closed');
     }
