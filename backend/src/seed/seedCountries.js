@@ -4,8 +4,8 @@ async function seedCountries(){
   let db;
   try{
     db = await connectDB();
-    if (!db){
-      console.log("Database connection failed");
+    if(!db){
+      console.log('Database connection failed.');
       return;
     }
 
