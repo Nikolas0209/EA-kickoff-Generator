@@ -150,7 +150,7 @@ async function seedCountries(){
         {$set: doc},            // update fields
         {upsert: true}          // insert if not found
       );
-    }
+    };
 
     console.log('Seeded countries successfully!');
   } catch(err){
