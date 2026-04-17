@@ -137,13 +137,7 @@ async function seedClubs(){
       league: 'Liga Portugal',
       logo: '/clubLogos/benfica'
      },
-     {
-      club: 'RB Salzburg',
-      stars: 3.5,
-      competition: 'UCL',
-      league: 'Austrian Bundesliga',
-      logo: '/clubLogos/rb_salzburg'
-     },
+    
      {
       club: 'Lazio',
       stars: 4.5,
@@ -309,13 +303,7 @@ async function seedClubs(){
       league: 'Liga Portugal',
       logo: '/clubLogos/sporting_CP'
      },
-     {
-      club: 'Sturm Graz',
-      stars: 3,
-      competition: 'UEL',
-      league: 'Austrian Bundesliga',
-      logo: '/clubLogos/sturm_graz'
-     },
+     
      {
       club: 'Rakow',
       stars: 3,
@@ -344,13 +332,7 @@ async function seedClubs(){
       league: 'Belgian Pro League',
       logo: '/clubLogos/usg'
      },
-     {
-      club: 'LASK',
-      stars: 3,
-      competition: 'UEL',
-      league: 'Austrian Bundesliga',
-      logo: '/clubLogos/lask'
-     },
+     
      {
       club: 'Villarreal',
       stars: 4.5,
@@ -416,7 +398,7 @@ async function seedClubs(){
      },
 
 
-     
+
      {
       club: 'Lille',
       stars: 4,
