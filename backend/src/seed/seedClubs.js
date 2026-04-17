@@ -146,13 +146,6 @@ async function seedClubs(){
       logo: '/clubLogos/lazio'
      },
      {
-      club: 'Celtic',
-      stars: 3.5,
-      competition: 'UCL',
-      league: 'Scottish Premiership',
-      logo: '/clubLogos/celtic'
-     },
-     {
       club: 'Dortmund',
       stars: 4.5,
       competition: 'UCL',
@@ -268,13 +261,7 @@ async function seedClubs(){
       league: 'Rest of World',
       logo: '/clubLogos/aek'
      },
-     {
-      club: 'Rangers',
-      stars: 3.5,
-      competition: 'UEL',
-      league: 'Scottish Premiership',
-      logo: '/clubLogos/rangers'
-     },
+    
      {
       club: 'Sparta Praha',
       stars: 3.5,
@@ -510,13 +497,6 @@ async function seedClubs(){
       competition: 'UECL',
       league: 'Bundesliga',
       logo: '/clubLogos/frankfurt'
-     },
-     {
-      club: 'Aberdeen',
-      stars: 2.5,
-      competition: 'UECL',
-      league: 'Scottish Premiership',
-      logo: '/clubLogos/aberdeen'
      },
      {
       club: 'HJK',
