@@ -2,12 +2,14 @@ import express from 'express';
 import countriesRoutes from './routes/countries.routes.js';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import clubRoutes from './routes/clubs.routes.js';
 
 const app = express();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 app.use('/countries', countriesRoutes);
+app.use('/clubs', clubRoutes);
 app.use('/clubLogos', express.static(path.join(__dirname, 'assets/clubLogos')));
 
 app.listen(3000, () => {

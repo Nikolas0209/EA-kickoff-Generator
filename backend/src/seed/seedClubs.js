@@ -11,7 +11,8 @@ async function seedClubs(){
 
     const clubs = db.collection('clubs');
 
-    const docs = [{
+    const docs = [
+     {
       club: 'Real Madrid',
       stars: 5,
       competition: 'UCL',
@@ -520,6 +521,9 @@ async function seedClubs(){
       logo: '/clubLogos/nordsjaelland'
      }
     ];
+
+    console.log('Seeding clubs...');
+    console.log('Docs count:', docs.length);
 
     for(const doc of docs){
       await clubs.updateOne(
