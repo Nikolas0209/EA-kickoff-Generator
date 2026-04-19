@@ -16,126 +16,144 @@ async function seedClubs(){
       club: 'Real Madrid',
       stars: 5,
       competition: 'UCL',
-      league: 'LaLiga',
+      leagueName: 'LaLiga',
+      league: 'laliga',
       logo: '/clubLogos/real_madrid'
      },
      {
       club: 'Barcelona',
       stars: 5,
       competition: 'UCL',
-      league: 'LaLiga',
+      leagueName: 'LaLiga',
+      league: 'laliga',
       logo: '/clubLogos/barcelona'
      },
      {
       club: 'Arsenal',
       stars: 5,
       competition: 'UCL',
-      league: 'Premier League',
+      leagueName: 'Premier League',
+      league: 'premier-league',
       logo: '/clubLogos/arsenal'
      },
      {
       club: 'Inter',
       stars: 4.5,
       competition: 'UCL',
-      league: 'Serie A',
+      leagueName: 'Serie A',
+      league: 'serie-a',
       logo: '/clubLogos/inter'
      },
      {
       club: 'Atletico Madrid',
       stars: 5,
       competition: 'UCL',
-      league: 'LaLiga',
+      leagueName: 'LaLiga',
+      league: 'laliga',
       logo: '/clubLogos/atletico_madrid'
      },
      {
       club: 'PSG',
       stars: 5,
       competition: 'UCL',
-      league: 'Ligue 1',
+      leagueName: 'Ligue 1',
+      league: 'ligue-1',
       logo: '/clubLogos/psg'
      },
      {
       club: 'Bayern München',
       stars: 5,
       competition: 'UCL',
-      league: 'Bundesliga',
+      leagueName: 'Bundesliga',
+      league: 'bundesliga',
       logo: '/clubLogos/bayern_munich'
      },
      {
       club: 'København',
       stars: 3.5,
       competition: 'UCL',
-      league: 'Danish Superliga',
+      leagueName: 'Danish Superliga',
+      league: 'danish-superliga',
       logo: '/clubLogos/kobenhagen'
      },
      {
       club: 'Galatasaray',
       stars: 4,
       competition: 'UCL',
-      league: 'Süper Lig',
+      leagueName: 'Süper Lig',
+      league: 'super-lig',
       logo: '/clubLogos/galatasaray'
      },
      {
       club: 'Man Utd',
       stars: 4.5,
       competition: 'UCL',
-      league: 'Premier League',
+      leagueName: 'Premier League',
+      league: 'premier-league',
       logo: '/clubLogos/man_utd'
      }, 
      {
       club: 'PSV',
       stars: 4,
       competition: 'UCL',
-      league: 'Eredivisie',
+      leagueName: 'Eredivisie',
+      league: 'eredivisie',
       logo: '/clubLogos/psv'
      },
      {
       club: 'Sevilla',
       stars: 4.5,
       competition: 'UCL',
-      league: 'LaLiga',
+      leagueName: 'LaLiga',
+      league: 'laliga',
       logo: '/clubLogos/sevilla'
      },
      {
       club: 'Lens',
       stars: 4,
       competition: 'UCL',
-      league: 'Ligue 1',
+      leagueName: 'Ligue 1',
+      league: 'ligue-1',
       logo: '/clubLogos/lens'
      },
      {
       club: 'Napoli',
       stars: 4.5,
       competition: 'UCL',
-      league: 'Serie A',
+      leagueName: 'Serie A',
+      league: 'serie-a',
       logo: '/clubLogos/napoli'
      },
      {
       club: 'Braga',
       stars: 4,
       competition: 'UCL',
-      league: 'Liga Portugal',
+      leagueName: 'Liga Portugal',
+      league: 'liga-portugal',
       logo: '/clubLogos/braga'
      },
      {
       club: 'Union Berlin',
       stars: 4,
       competition: 'UCL',
-      league: 'Bundesliga',
+      leagueName: 'Bundesliga',
+      league: 'bundesliga',
       logo: '/clubLogos/union_berlin'
      },
      {
       club: 'Real Sociedad',
       stars: 4.5,
       competition: 'UCL',
-      league: 'LaLiga',
+      leagueName: 'LaLiga',
+      league: 'laliga',
       logo: '/clubLogos/real_sociedad'
      },
      {
       club: 'Benfica',
       stars: 4.5,
       competition: 'UCL',
-      league: 'Liga Portugal',
+      leagueName: 'Liga Portugal',
+      league: 'liga-portugal',
       logo: '/clubLogos/benfica'
      },
     
@@ -143,77 +161,88 @@ async function seedClubs(){
       club: 'Lazio',
       stars: 4.5,
       competition: 'UCL',
-      league: 'Serie A',
+      leagueName: 'Serie A',
+      league: 'serie-a',
       logo: '/clubLogos/lazio'
      },
      {
       club: 'Dortmund',
       stars: 4.5,
       competition: 'UCL',
-      league: 'Bundesliga',
+      leagueName: 'Bundesliga',
+      league: 'bundesliga',
       logo: '/clubLogos/dortmund'
      },
      {
       club: 'Milan',
       stars: 4.5,
       competition: 'UCL',
-      league: 'Serie A',
+      leagueName: 'Serie A',
+      league: 'serie-a',
       logo: '/clubLogos/milan'
      },
      {
       club: 'Newcastle',
       stars: 4.5,
       competition: 'UCL',
-      league: 'Premier League',
+      leagueName: 'Premier League',
+      league: 'premier-league',
       logo: '/clubLogos/newcastle'
      },
      {
       club: 'Man City',
       stars: 5,
       competition: 'UCL',
-      league: 'Premier League',
+      leagueName: 'Premier League',
+      league: 'premier-league',
       logo: '/clubLogos/man_city'
      },
      {
       club: 'Leipzig',
       stars: 4.5,
       competition: 'UCL',
-      league: 'Bundesliga',
+      leagueName: 'Bundesliga',
+      league: 'bundesliga',
       logo: '/clubLogos/leipzig'
      },
      {
       club: 'Young Boys',
       stars: 3.5,
       competition: 'UCL',
-      league: 'Swiss Super League',
+      leagueName: 'Swiss Super League',
+      league: 'swiss-super-league',
       logo: '/clubLogos/young_boys'
      },
      {
       club: 'Porto',
       stars: 4,
       competition: 'UCL',
-      league: 'Liga Portugal',
+      leagueName: 'Liga Portugal',
+      league: 'liga-portugal',
       logo: '/clubLogos/porto'
      },
      {
       club: 'Shakhtar',
       stars: 3.5,
       competition: 'UCL',
-      league: 'Rest of World',
+      leagueName: 'Rest of World',
+      league: 'rest-of-world',
       logo: '/clubLogos/shakhtar'
      },
      {
       club: 'Royal Antwerp',
       stars: 3.5,
       competition: 'UCL',
-      league: 'Belgian Pro League',
+      leagueName: 'Belgian Pro League',
+      league: 'belgian-pro-league',
       logo: '/clubLogos/royal_antwerp'
      },
      {
       club: 'Feyenoord',
       stars: 4,
       competition: 'UCL',
-      league: 'Eredivisie',
+      leagueName: 'Eredivisie',
+      league: 'eredivisie',
       logo: '/clubLogos/feyenoord'
      },
 
@@ -224,42 +253,48 @@ async function seedClubs(){
       club: 'West Ham',
       stars: 4,
       competition: 'UEL',
-      league: 'Premier League',
+      leagueName: 'Premier League',
+      league: 'premier-league',
       logo: '/clubLogos/west_ham'
      },
      {
       club: 'Freiburg',
       stars: 4,
       competition: 'UEL',
-      league: 'Bundesliga',
+      leagueName: 'Bundesliga',
+      league: 'bundesliga',
       logo: '/clubLogos/freiburg'
      },
      {
       club: 'Brighton',
       stars: 4,
       competition: 'UEL',
-      league: 'Premier League',
+      leagueName: 'Premier League',
+      league: 'premier-league',
       logo: '/clubLogos/brighton'
      },
      {
       club: 'Marseille',
       stars: 4,
       competition: 'UEL',
-      league: 'Ligue 1',
+      leagueName: 'Ligue 1',
+      league: 'ligue-1',
       logo: '/clubLogos/marseille'
      },
      {
       club: 'Ajax',
       stars: 3.5,
       competition: 'UEL',
-      league: 'Eredivisie',
+      leagueName: 'Eredivisie',
+      league: 'eredivisie',
       logo: '/clubLogos/ajax'
      },
      {
       club: 'AEK',
       stars: 4,
       competition: 'UEL',
-      league: 'Rest of World',
+      leagueName: 'Rest of World',
+      league: 'rest-of-the-world',
       logo: '/clubLogos/aek'
      },
     
@@ -267,28 +302,32 @@ async function seedClubs(){
       club: 'Sparta Praha',
       stars: 3.5,
       competition: 'UEL',
-      league: 'Rest of World',
+      leagueName: 'Rest of World', 
+      league: 'rest-of-the-world',
       logo: '/clubLogos/sparta_praha'
      },
      {
       club: 'Real Betis',
       stars: 4,
       competition: 'UEL',
-      league: 'LaLiga',
+      leagueName: 'LaLiga',
+      league: 'laliga',
       logo: '/clubLogos/real_betis'
      },
      {
       club: 'Atalanta',
       stars: 4,
       competition: 'UEL',
-      league: 'Serie A',
+      leagueName: 'Serie A',
+      league: 'serie-a',
       logo: '/clubLogos/atalanta'
      },
      {
       club: 'Sporting CP',
       stars: 4,
       competition: 'UEL',
-      league: 'Liga Portugal',
+      leagueName: 'Liga Portugal',
+      league: 'liga-portugal',
       logo: '/clubLogos/sporting_CP'
      },
      
@@ -296,28 +335,32 @@ async function seedClubs(){
       club: 'Rakow',
       stars: 3,
       competition: 'UEL',
-      league: 'Ekstraklasa',
+      leagueName: 'Ekstraklasa',
+      league: 'ekstraklasa',
       logo: '/clubLogos/rakow'
      },
      {
       club: 'Liverpool',
       stars: 5,
       competition: 'UEL',
-      league: 'Premier League',
+      leagueName: 'Premier League',
+      league: 'premier-league',
       logo: '/clubLogos/liverpool'
      },
      {
       club: 'Toulouse',
       stars: 3.5,
       competition: 'UEL',
-      league: 'Ligue 1',
+      leagueName: 'Ligue 1',
+      league: 'ligue-1',
       logo: '/clubLogos/toulouse'
      },
      {
       club: 'USG',
       stars: 3,
       competition: 'UEL',
-      league: 'Belgian Pro League',
+      leagueName: 'Belgian Pro League',
+      league: 'belgian-pro-league',
       logo: '/clubLogos/usg'
      },
      
@@ -325,63 +368,72 @@ async function seedClubs(){
       club: 'Villarreal',
       stars: 4.5,
       competition: 'UEL',
-      league: 'LaLiga',
+      leagueName: 'LaLiga',
+      league: 'laliga',
       logo: '/clubLogos/villarreal'
      },
      {
       club: 'Rennes',
       stars: 4,
       competition: 'UEL',
-      league: 'Ligue 1',
+      leagueName: 'Ligue 1',
+      league: 'ligue-1',
       logo: '/clubLogos/rennes'
      },
      {
       club: 'Panathinaikos',
       stars: 3.5,
       competition: 'UEL',
-      league: 'Rest of World',
+      leagueName: 'Rest of World',
+      league: 'rest-of-world',
       logo: '/clubLogos/panathinaikos'
      },
      {
       club: 'Slavia Praha',
       stars: 3.5,
       competition: 'UEL',
-      league: 'Rest of World',
+      leagueName: 'Rest of World',
+      league: 'rest-of-world',
       logo: '/clubLogos/slavia_praha'
      },
      {
       club: 'Roma',
       stars: 4.5,
       competition: 'UEL',
-      league: 'Serie A',
+      leagueName: 'Serie A',
+      league: 'serie-a',
       logo: '/clubLogos/roma'
      },
      {
       club: 'Servette FC',
       stars: 2.5,
       competition: 'UEL',
-      league: 'Swiss Super League',
+      leagueName: 'Swiss Super League',
+      league: 'swiss-super-league',
       logo: '/clubLogos/servette'
      },
      {
       club: 'Leverkusen',
       stars: 4.5,
       competition: 'UEL',
-      league: 'Bundesliga',
+      leagueName: 'Bundesliga',
+      league: 'bundesliga',
       logo: '/clubLogos/leverkusen'
      },
      {
       club: 'Molde',
       stars: 2.5,
       competition: 'UEL',
-      league: 'Eliteserien',
+      leagueName: 'Eliteserien',
+      league: 'eliteserien',
       logo: '/clubLogos/molde'
      },
      {
       club: 'Häcken',
       stars: 3,
       competition: 'UEL',
-      league: 'Allsvenskan',
+      leagueName: 'Allsvenskan',
+      league: 'allsvenskan',
       logo: '/clubLogos/hacken'
      },
 
@@ -391,147 +443,163 @@ async function seedClubs(){
       club: 'Lille',
       stars: 4,
       competition: 'UECL',
-      league: 'Ligue 1',
+      leagueName: 'Ligue 1',
+      league: 'ligue-1',
       logo: '/clubLogos/lille'
      },
      {
       club: 'Gent',
       stars: 3.5,
       competition: 'UECL',
-      league: 'Belgian Pro League',
+      leagueName: 'Belgian Pro League',
+      league: 'belgian-pro-league',
       logo: '/clubLogos/gent'
      },
      {
       club: 'Viktoria Plzeň',
       stars: 3.5,
       competition: 'UECL',
-      league: 'Rest of World',
+      leagueName: 'Rest of World',
+      league: 'rest-of-world',
       logo: '/clubLogos/viktoria_plzen'
      },
      {
       club: 'Dinamo Zagreb',
       stars: 3.5,
       competition: 'UECL',
-      league: 'Rest of World',
+      leagueName: 'Rest of World',
+      league: 'rest-of-world',
       logo: '/clubLogos/dinamo_zagreb'
      },
      {
       club: 'Club Brugge',
       stars: 3.5,
       competition: 'UECL',
-      league: 'Belgian Pro League',
+      leagueName: 'Belgian Pro League',
+      league: 'belgian-pro-league',
       logo: '/clubLogos/club_brugge'
      },
      {
       club: 'Bodø/Glimt',
       stars: 3,
       competition: 'UECL',
-      league: 'Eliteserien',
+      leagueName: 'Eliteserien',
+      league: 'eliteserien',
       logo: '/clubLogos/bodo_glimt'
      },
      {
       club: 'Beşiktaş',
       stars: 4,
       competition: 'UECL',
-      league: 'Süper Lig',
+      leagueName: 'Süper Lig',
+      league: 'super-lig',
       logo: '/clubLogos/besiktas'
      },
      {
       club: 'Lugano',
       stars: 2.5,
       competition: 'UECL',
-      league: 'Swiss Super League',
+      leagueName: 'Swiss Super League',
+      league: 'swiss-super-league',
       logo: '/clubLogos/lugano'
      },
      {
       club: 'Aston Villa',
       stars: 4.5,
       competition: 'UECL',
-      league: 'Premier League',
+      leagueName: 'Premier League',
+      league: 'premier-league',
       logo: '/clubLogos/aston_villa'
      },
      {
       club: 'Legia',
       stars: 2.5,
       competition: 'UECL',
-      league: 'Ekstraklasa',
+      leagueName: 'Ekstraklasa',
+      league: 'ekstraklasa',
       logo: '/clubLogos/legia'
      },
      {
       club: 'AZ',
       stars: 3.5,
       competition: 'UECL',
-      league: 'Eredivisie',
+      leagueName: 'Eredivisie',
+      league: 'eredivisie',
       logo: '/clubLogos/az'
      },
      {
       club: 'Fiorentina',
       stars: 4,
       competition: 'UECL',
-      league: 'Serie A',
+      leagueName: 'Serie A',
+      league: 'serie-a',
       logo: '/clubLogos/fiorentina'
      },
      {
       club: 'Ferencváros',
       stars: 3.5,
       competition: 'UECL',
-      league: 'Rest of World',
+      leagueName: 'Rest of World',
+      league: 'rest-of-world',
       logo: '/clubLogos/ferencvaros'
      },
      {
       club: 'Genk',
       stars: 3.5,
       competition: 'UECL',
-      league: 'Belgian Pro League',
+      leagueName: 'Belgian Pro League',
+      league: 'belgian-pro-league',
       logo: '/clubLogos/genk'
      },
      {
       club: 'PAOK',
       stars: 3.5,
       competition: 'UECL',
-      league: 'Rest of World',
+      leagueName: 'Rest of World',
+      league: 'rest-of-world',
       logo: '/clubLogos/paok'
      },
      {
       club: 'Frankfurt',
       stars: 4,
       competition: 'UECL',
-      league: 'Bundesliga',
+      leagueName: 'Bundesliga',
+      league: 'bundesliga',
       logo: '/clubLogos/frankfurt'
      },
      {
       club: 'HJK',
       stars: 2,
       competition: 'UECL',
-      league: 'Rest of World',
+      leagueName: 'Rest of World',
+      league: 'rest-of-world',
       logo: '/clubLogos/hjk'
      },
      {
       club: 'Fenerbahçe',
       stars: 4,
       competition: 'UECL',
-      league: 'Süper Lig',
+      leagueName: 'Süper Lig',
+      league: 'super-lig',
       logo: '/clubLogos/fenerbahce'
      },
      {
       club: 'Nordsjælland',
       stars: 2.5,
       competition: 'UECL',
-      league: 'Danish Superliga',
+      leagueName: 'Danish Superliga',
+      league: 'danish-superliga',
       logo: '/clubLogos/nordsjaelland'
-     }
+     },
     ];
 
-    console.log('Seeding clubs...');
-    console.log('Docs count:', docs.length);
-
-    for(const doc of docs){
-      await clubs.updateOne(
-        {club: doc.club},
-        {$set: doc},
-        {upsert: true}
+    for (const doc of docs) {
+      await clubs.replaceOne(
+        { club: doc.club },
+        doc,
+        { upsert: true }
       );
-    };
+    }
 
   } catch(err){
     console.error('Seeding failed:', err);
