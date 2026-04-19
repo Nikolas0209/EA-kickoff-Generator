@@ -6,7 +6,12 @@ const router = express.Router();
 
 router.get('/', async (req, res) => {
   try{
-    const teams = await getCollection('clubs');
+    const { competition } = req.query; 
+    let teams = await getCollection('clubs');
+
+    if(competition){
+      teams = teams.filter(team => team.competition?.trim().toUpperCase() === competition.trim().toUpperCase());
+    }
 
     if(teams.length < 2){
       return res.status(400).json({error: 'Not enough teams'});
@@ -14,7 +19,7 @@ router.get('/', async (req, res) => {
 
     const homeTeam = getRandomTeam(teams);
 
-    const availableTeams = teams.filter(team => !team._id.equals(homeTeam._id));
+    const availableTeams = teams.filter(team => !team._id.equals(homeTeam._id));  
     const awayTeam = availableTeams[Math.floor(Math.random() * availableTeams.length)];
 
     const kickOffTeams = {
