@@ -7,10 +7,15 @@ const router = express.Router();
 router.get('/', async (req, res) => {
   try{
     const { competition } = req.query; 
+    const { league } = req.query;
     let teams = await getCollection('clubs');
 
     if(competition){
-      teams = teams.filter(team => team.competition?.trim().toUpperCase() === competition.trim().toUpperCase());
+      teams = teams.filter(team => team.competition.toUpperCase() === competition.toUpperCase());
+    }
+    
+    if(league){
+      teams = teams.filter(team => team.league === league);
     }
 
     if(teams.length < 2){

@@ -590,14 +590,14 @@ async function seedClubs(){
       leagueName: 'Danish Superliga',
       league: 'danish-superliga',
       logo: '/clubLogos/nordsjaelland'
-     },
+     }, 
     ];
 
-    for (const doc of docs) {
+    for (const doc of docs){
       await clubs.replaceOne(
-        { club: doc.club },
+        {club: doc.club},
         doc,
-        { upsert: true }
+        {upsert: true}
       );
     }
 
