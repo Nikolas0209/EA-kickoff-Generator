@@ -72,7 +72,7 @@ router.get('/random-team', async (req, res) => {
     teams = teams.filter(team => team.league === league);
    }
 
-   if(teams.length < 1){
+   if(teams.length < 2){
     return res.status(400).json({error: 'Not enough teams'});
    }
 
@@ -81,6 +81,30 @@ router.get('/random-team', async (req, res) => {
    res.status(200).json({newTeam});
   }catch(error){
     res.status(500).json({error: 'The kick-off could not be generated'});
+  }
+});
+
+router.get('/club-ratings/reroll', async (req, res) => {
+  try{
+    const { baseTeamId } = req.query;
+     
+    const teams = await getCollection('clubs');
+  
+    if(teams.length < 2){
+     return res.status(400).json({error: 'Not enough teams'});
+    }
+
+    const baseTeam = teams.find(team =>team._id.equals(baseTeamId));
+
+    if(!baseTeam){
+      return res.status(404).json({error: 'Base team not found'});
+    }
+
+    const newTeam = getRandomTeamByRating(teams, baseTeam);
+
+    res.status(200).json({newTeam});
+  } catch(error){
+   res.status(500).json({error: 'The kickoff could not be generated'});
   }
 });
 
