@@ -1,13 +1,13 @@
 import express from 'express';
 import getCollection from '../utils/getCollection.js';
 import getRandomTeam from '../utils/getRandomTeam.js';
+import getRandomTeamByRating from '../utils/getRandomTeamByRating.js';
 
 const router = express.Router();
 
 router.get('/', async (req, res) => {
   try{
-    const { competition } = req.query; 
-    const { league } = req.query;
+    const { competition, league } = req.query; 
     let teams = await getCollection('clubs');
 
     if(competition){
@@ -45,22 +45,7 @@ router.get('/club-ratings', async (req, res) => {
     };
 
     const homeTeam = getRandomTeam(teams);
-
-    const getAllRatings = teams.map(team => team.stars);
-    const lowestStarsTeam = Math.min(...getAllRatings); 
-
-    const maxRating = homeTeam.stars + 1;
-    const minRating = Math.max(homeTeam.stars - 1, lowestStarsTeam);
-
-    const teamRating = teams.filter(team => team.stars >= minRating && team.stars <= maxRating);
-
-    let availableAwayTeams = teamRating.filter(team => !team._id.equals(homeTeam._id));
-
-    if(availableAwayTeams.length === 0){
-      availableAwayTeams = teams.filter(team => !team._id.equals(homeTeam._id));
-    }
-
-    const awayTeam = availableAwayTeams[Math.floor(Math.random() * availableAwayTeams.length)];
+    const awayTeam = getRandomTeamByRating(teams, homeTeam);
 
     const kickOffTeams = {
       homeTeam,
