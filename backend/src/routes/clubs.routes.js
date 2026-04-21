@@ -58,7 +58,7 @@ router.get('/club-ratings', async (req, res) => {
   }
 });
 
-router.get('/random-team', async (req, res) => {
+router.get('/random-team/reroll', async (req, res) => {
   try{
    const { competition, league } = req.query;
   
