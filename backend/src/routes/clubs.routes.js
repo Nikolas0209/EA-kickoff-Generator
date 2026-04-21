@@ -7,7 +7,7 @@ const router = express.Router();
 
 router.get('/', async (req, res) => {
   try{
-    const { competition, league } = req.query; 
+    const { competition, league, homeLeague, awayLeague } = req.query; 
     let teams = await getCollection('clubs');
 
     if(competition){
@@ -17,6 +17,25 @@ router.get('/', async (req, res) => {
     if(league){
       teams = teams.filter(team => team.league === league);
     }
+
+    if(homeLeague && awayLeague){
+      let teamsHome = teams.filter(team => team.league === homeLeague);
+      let teamsAway = teams.filter(team => team.league === awayLeague);
+
+      if(teamsHome.length < 1 || teamsAway.length < 1){
+       return res.status(400).json({error: 'Not enough teams in one of the leagues'});
+      }
+
+      const homeTeam = getRandomTeam(teamsHome);
+      const awayTeam = getRandomTeam(teamsAway);
+
+      const kickOffTeams = {
+       homeTeam,
+       awayTeam
+      }
+
+      return res.status(200).json(kickOffTeams);
+    };
 
     if(teams.length < 2){
       return res.status(400).json({error: 'Not enough teams'});
