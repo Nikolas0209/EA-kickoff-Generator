@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
     if(competition){
       teams = teams.filter(team => team.competition.toUpperCase() === competition.toUpperCase());
     }
-    
+
     if(league){
       teams = teams.filter(team => team.league === league);
     }
@@ -23,9 +23,7 @@ router.get('/', async (req, res) => {
     }
 
     const homeTeam = getRandomTeam(teams);
-
-    const availableTeams = teams.filter(team => !team._id.equals(homeTeam._id));  
-    const awayTeam = availableTeams[Math.floor(Math.random() * availableTeams.length)];
+    const awayTeam = getRandomTeam(teams, homeTeam._id);
 
     const kickOffTeams = {
       homeTeam,
@@ -70,6 +68,32 @@ router.get('/club-ratings', async (req, res) => {
     }
 
     res.status(200).json(kickOffTeams);
+  }catch(error){
+    res.status(500).json({error: 'The kick-off could not be generated'});
+  }
+});
+
+router.get('/random-team', async (req, res) => {
+  try{
+   const { competition, league } = req.query;
+  
+   let teams = await getCollection('clubs');
+
+   if(competition){
+    teams = teams.filter(team => team.competition.toUpperCase() === competition.toUpperCase());
+   }
+
+   if(league){
+    teams = teams.filter(team => team.league === league);
+   }
+
+   if(teams.length < 1){
+    return res.status(400).json({error: 'Not enough teams'});
+   }
+
+   const newTeam = getRandomTeam(teams);
+
+   res.status(200).json({newTeam});
   }catch(error){
     res.status(500).json({error: 'The kick-off could not be generated'});
   }
