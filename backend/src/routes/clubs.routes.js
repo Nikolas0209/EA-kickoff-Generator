@@ -2,6 +2,7 @@ import express from 'express';
 import getCollection from '../utils/getCollection.js';
 import getRandomTeam from '../utils/getRandomTeam.js';
 import getRandomTeamByRating from '../utils/getRandomTeamByRating.js';
+import applyFilters from '../utils/applyFilters.js';
 
 const router = express.Router();
 
@@ -9,14 +10,7 @@ router.get('/', async (req, res) => {
   try{
     const { competition, league, homeLeague, awayLeague } = req.query; 
     let teams = await getCollection('clubs');
-
-    if(competition){
-      teams = teams.filter(team => team.competition.toUpperCase() === competition.toUpperCase());
-    }
-
-    if(league){
-      teams = teams.filter(team => team.league === league);
-    }
+    teams = applyFilters(teams, {competition,league});
 
     if(homeLeague && awayLeague){
       let teamsHome = teams.filter(team => team.league === homeLeague);
@@ -80,17 +74,9 @@ router.get('/club-ratings', async (req, res) => {
 router.get('/random-team/reroll', async (req, res) => {
   try{
    const { competition, league } = req.query;
-  
    let teams = await getCollection('clubs');
-
-   if(competition){
-    teams = teams.filter(team => team.competition.toUpperCase() === competition.toUpperCase());
-   }
-
-   if(league){
-    teams = teams.filter(team => team.league === league);
-   }
-
+   teams = applyFilters(teams, { competition,league })
+  
    if(teams.length < 2){
     return res.status(400).json({error: 'Not enough teams'});
    }
@@ -114,7 +100,7 @@ router.get('/club-ratings/reroll', async (req, res) => {
     }
 
     const baseTeam = teams.find(team =>team._id.equals(baseTeamId));
-
+   
     if(!baseTeam){
       return res.status(404).json({error: 'Base team not found'});
     }
