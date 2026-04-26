@@ -1,5 +1,6 @@
 import { connectDB } from '../db.js';
 import { austrianBundesliga } from './leagues/austrianBundesliga.js';
+import { premierDivision } from './leagues/premierDivision.js';
 import { restOfWorld } from './leagues/restOfWorld.js';
 import { scottishPremiership } from './leagues/scottishPremiership.js';
 
@@ -524,6 +525,7 @@ async function seedClubs(){
      }, ...austrianBundesliga, 
         ...scottishPremiership,
         ...restOfWorld,
+        ...premierDivision,
         
     ];
 
