@@ -10,6 +10,7 @@ router.get('/', async (req, res) => {
   try{
     const { competition, league, homeLeague, awayLeague } = req.query; 
     let teams = await getCollection('clubs');
+
     teams = applyFilters(teams, {competition,league});
 
     if(homeLeague && awayLeague){

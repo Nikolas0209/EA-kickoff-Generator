@@ -1,4 +1,7 @@
 import { connectDB } from '../db.js';
+import { austrianBundesliga } from './leagues/austrianBundesliga.js';
+import { restOfWorld } from './leagues/restOfWorld.js';
+import { scottishPremiership } from './leagues/scottishPremiership.js';
 
 async function seedClubs(){
   let db;
@@ -222,14 +225,6 @@ async function seedClubs(){
       logo: '/clubLogos/porto'
      },
      {
-      club: 'Shakhtar',
-      stars: 3.5,
-      competition: 'UCL',
-      leagueName: 'Rest of World',
-      league: 'rest-of-world',
-      logo: '/clubLogos/shakhtar'
-     },
-     {
       club: 'Royal Antwerp',
       stars: 3.5,
       competition: 'UCL',
@@ -289,23 +284,9 @@ async function seedClubs(){
       league: 'eredivisie',
       logo: '/clubLogos/ajax'
      },
-     {
-      club: 'AEK',
-      stars: 4,
-      competition: 'UEL',
-      leagueName: 'Rest of World',
-      league: 'rest-of-the-world',
-      logo: '/clubLogos/aek'
-     },
+ 
     
-     {
-      club: 'Sparta Praha',
-      stars: 3.5,
-      competition: 'UEL',
-      leagueName: 'Rest of World', 
-      league: 'rest-of-the-world',
-      logo: '/clubLogos/sparta_praha'
-     },
+    
      {
       club: 'Real Betis',
       stars: 4,
@@ -380,22 +361,7 @@ async function seedClubs(){
       league: 'ligue-1',
       logo: '/clubLogos/rennes'
      },
-     {
-      club: 'Panathinaikos',
-      stars: 3.5,
-      competition: 'UEL',
-      leagueName: 'Rest of World',
-      league: 'rest-of-world',
-      logo: '/clubLogos/panathinaikos'
-     },
-     {
-      club: 'Slavia Praha',
-      stars: 3.5,
-      competition: 'UEL',
-      leagueName: 'Rest of World',
-      league: 'rest-of-world',
-      logo: '/clubLogos/slavia_praha'
-     },
+    
      {
       club: 'Roma',
       stars: 4.5,
@@ -455,22 +421,8 @@ async function seedClubs(){
       league: 'belgian-pro-league',
       logo: '/clubLogos/gent'
      },
-     {
-      club: 'Viktoria Plzeň',
-      stars: 3.5,
-      competition: 'UECL',
-      leagueName: 'Rest of World',
-      league: 'rest-of-world',
-      logo: '/clubLogos/viktoria_plzen'
-     },
-     {
-      club: 'Dinamo Zagreb',
-      stars: 3.5,
-      competition: 'UECL',
-      leagueName: 'Rest of World',
-      league: 'rest-of-world',
-      logo: '/clubLogos/dinamo_zagreb'
-     },
+    
+    
      {
       club: 'Club Brugge',
       stars: 3.5,
@@ -535,14 +487,7 @@ async function seedClubs(){
       league: 'serie-a',
       logo: '/clubLogos/fiorentina'
      },
-     {
-      club: 'Ferencváros',
-      stars: 3.5,
-      competition: 'UECL',
-      leagueName: 'Rest of World',
-      league: 'rest-of-world',
-      logo: '/clubLogos/ferencvaros'
-     },
+    
      {
       club: 'Genk',
       stars: 3.5,
@@ -551,14 +496,7 @@ async function seedClubs(){
       league: 'belgian-pro-league',
       logo: '/clubLogos/genk'
      },
-     {
-      club: 'PAOK',
-      stars: 3.5,
-      competition: 'UECL',
-      leagueName: 'Rest of World',
-      league: 'rest-of-world',
-      logo: '/clubLogos/paok'
-     },
+    
      {
       club: 'Frankfurt',
       stars: 4,
@@ -567,14 +505,7 @@ async function seedClubs(){
       league: 'bundesliga',
       logo: '/clubLogos/frankfurt'
      },
-     {
-      club: 'HJK',
-      stars: 2,
-      competition: 'UECL',
-      leagueName: 'Rest of World',
-      league: 'rest-of-world',
-      logo: '/clubLogos/hjk'
-     },
+     
      {
       club: 'Fenerbahçe',
       stars: 4,
@@ -590,7 +521,10 @@ async function seedClubs(){
       leagueName: 'Danish Superliga',
       league: 'danish-superliga',
       logo: '/clubLogos/nordsjaelland'
-     }, 
+     }, ...austrianBundesliga, 
+        ...scottishPremiership,
+        ...restOfWorld,
+        
     ];
 
     for (const doc of docs){
@@ -599,8 +533,7 @@ async function seedClubs(){
         doc,
         {upsert: true}
       );
-    }
-
+    };    
   } catch(err){
     console.error('Seeding failed:', err);
   } finally {
