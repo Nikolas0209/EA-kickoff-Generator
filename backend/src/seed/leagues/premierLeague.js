@@ -63,8 +63,6 @@ export const premierLeague = [
   league: 'premier-league',
   logo: '/clubLogos/aston_villa'
  },
-
-
  {
   club: 'Chelsea',
   stars: 4.5,

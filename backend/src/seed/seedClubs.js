@@ -7,6 +7,7 @@ import { premierLeague } from './leagues/premierLeague.js';
 import { restOfWorld } from './leagues/restOfWorld.js';
 import { scottishPremiership } from './leagues/scottishPremiership.js';
 import { seriea } from './leagues/seriea.js';
+import { swissSuperLeague } from './leagues/swissSuperLeague.js';
 
 async function seedClubs(){
   let db;
@@ -79,14 +80,7 @@ async function seedClubs(){
       logo: '/clubLogos/benfica'
      },
    
-     {
-      club: 'Young Boys',
-      stars: 3.5,
-      competition: 'UCL',
-      leagueName: 'Swiss Super League',
-      league: 'swiss-super-league',
-      logo: '/clubLogos/young_boys'
-     },
+    
      {
       club: 'Porto',
       stars: 4,
@@ -173,14 +167,7 @@ async function seedClubs(){
       league: 'ligue-1',
       logo: '/clubLogos/rennes'
      },
-     {
-      club: 'Servette FC',
-      stars: 2.5,
-      competition: 'UEL',
-      leagueName: 'Swiss Super League',
-      league: 'swiss-super-league',
-      logo: '/clubLogos/servette'
-     },
+    
      {
       club: 'Molde',
       stars: 2.5,
@@ -240,14 +227,7 @@ async function seedClubs(){
       league: 'super-lig',
       logo: '/clubLogos/besiktas'
      },
-     {
-      club: 'Lugano',
-      stars: 2.5,
-      competition: 'UECL',
-      leagueName: 'Swiss Super League',
-      league: 'swiss-super-league',
-      logo: '/clubLogos/lugano'
-     },
+    
     
      {
       club: 'Legia',
@@ -296,6 +276,7 @@ async function seedClubs(){
         ...bundesliga,
         ...seriea,
         ...premierLeague,
+        ...swissSuperLeague,
         
     ];
 
