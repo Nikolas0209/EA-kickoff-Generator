@@ -5,6 +5,7 @@ import { laliga } from './leagues/laliga.js';
 import { premierDivision } from './leagues/premierDivision.js';
 import { restOfWorld } from './leagues/restOfWorld.js';
 import { scottishPremiership } from './leagues/scottishPremiership.js';
+import { seriea } from './leagues/seriea.js';
 
 async function seedClubs(){
   let db;
@@ -25,14 +26,6 @@ async function seedClubs(){
       leagueName: 'Premier League',
       league: 'premier-league',
       logo: '/clubLogos/arsenal'
-     },
-     {
-      club: 'Inter',
-      stars: 4.5,
-      competition: 'UCL',
-      leagueName: 'Serie A',
-      league: 'serie-a',
-      logo: '/clubLogos/inter'
      },
      {
       club: 'PSG',
@@ -83,14 +76,6 @@ async function seedClubs(){
       logo: '/clubLogos/lens'
      },
      {
-      club: 'Napoli',
-      stars: 4.5,
-      competition: 'UCL',
-      leagueName: 'Serie A',
-      league: 'serie-a',
-      logo: '/clubLogos/napoli'
-     },
-     {
       club: 'Braga',
       stars: 4,
       competition: 'UCL',
@@ -105,22 +90,6 @@ async function seedClubs(){
       leagueName: 'Liga Portugal',
       league: 'liga-portugal',
       logo: '/clubLogos/benfica'
-     },
-     {
-      club: 'Lazio',
-      stars: 4.5,
-      competition: 'UCL',
-      leagueName: 'Serie A',
-      league: 'serie-a',
-      logo: '/clubLogos/lazio'
-     },
-     {
-      club: 'Milan',
-      stars: 4.5,
-      competition: 'UCL',
-      leagueName: 'Serie A',
-      league: 'serie-a',
-      logo: '/clubLogos/milan'
      },
      {
       club: 'Newcastle',
@@ -182,7 +151,6 @@ async function seedClubs(){
       league: 'premier-league',
       logo: '/clubLogos/west_ham'
      },
-   
      {
       club: 'Brighton',
       stars: 4,
@@ -206,14 +174,6 @@ async function seedClubs(){
       leagueName: 'Eredivisie',
       league: 'eredivisie',
       logo: '/clubLogos/ajax'
-     },
-     {
-      club: 'Atalanta',
-      stars: 4,
-      competition: 'UEL',
-      leagueName: 'Serie A',
-      league: 'serie-a',
-      logo: '/clubLogos/atalanta'
      },
      {
       club: 'Sporting CP',
@@ -264,14 +224,6 @@ async function seedClubs(){
       logo: '/clubLogos/rennes'
      },
      {
-      club: 'Roma',
-      stars: 4.5,
-      competition: 'UEL',
-      leagueName: 'Serie A',
-      league: 'serie-a',
-      logo: '/clubLogos/roma'
-     },
-     {
       club: 'Servette FC',
       stars: 2.5,
       competition: 'UEL',
@@ -279,7 +231,6 @@ async function seedClubs(){
       league: 'swiss-super-league',
       logo: '/clubLogos/servette'
      },
-    
      {
       club: 'Molde',
       stars: 2.5,
@@ -372,14 +323,6 @@ async function seedClubs(){
       logo: '/clubLogos/az'
      },
      {
-      club: 'Fiorentina',
-      stars: 4,
-      competition: 'UECL',
-      leagueName: 'Serie A',
-      league: 'serie-a',
-      logo: '/clubLogos/fiorentina'
-     },
-     {
       club: 'Genk',
       stars: 3.5,
       competition: 'UECL',
@@ -387,7 +330,6 @@ async function seedClubs(){
       league: 'belgian-pro-league',
       logo: '/clubLogos/genk'
      },
-   
      {
       club: 'Fenerbahçe',
       stars: 4,
@@ -409,6 +351,7 @@ async function seedClubs(){
         ...premierDivision,
         ...laliga,
         ...bundesliga,
+        ...seriea
     ];
 
     for (const doc of docs){
