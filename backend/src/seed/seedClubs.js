@@ -2,6 +2,7 @@ import { connectDB } from '../db.js';
 import { austrianBundesliga } from './leagues/austrianBundesliga.js';
 import { bundesliga } from './leagues/bundesliga.js';
 import { laliga } from './leagues/laliga.js';
+import { ligue1 } from './leagues/ligue1.js';
 import { premierDivision } from './leagues/premierDivision.js';
 import { premierLeague } from './leagues/premierLeague.js';
 import { restOfWorld } from './leagues/restOfWorld.js';
@@ -21,15 +22,6 @@ async function seedClubs(){
     const clubs = db.collection('clubs');
 
     const docs = [
-     
-     {
-      club: 'PSG',
-      stars: 5,
-      competition: 'UCL',
-      leagueName: 'Ligue 1',
-      league: 'ligue-1',
-      logo: '/clubLogos/psg'
-     },
      {
       club: 'København',
       stars: 3.5,
@@ -55,14 +47,7 @@ async function seedClubs(){
       league: 'eredivisie',
       logo: '/clubLogos/psv'
      },
-     {
-      club: 'Lens',
-      stars: 4,
-      competition: 'UCL',
-      leagueName: 'Ligue 1',
-      league: 'ligue-1',
-      logo: '/clubLogos/lens'
-     },
+    
      {
       club: 'Braga',
       stars: 4,
@@ -79,8 +64,6 @@ async function seedClubs(){
       league: 'liga-portugal',
       logo: '/clubLogos/benfica'
      },
-   
-    
      {
       club: 'Porto',
       stars: 4,
@@ -110,14 +93,7 @@ async function seedClubs(){
 
 
    
-     {
-      club: 'Marseille',
-      stars: 4,
-      competition: 'UEL',
-      leagueName: 'Ligue 1',
-      league: 'ligue-1',
-      logo: '/clubLogos/marseille'
-     },
+    
      {
       club: 'Ajax',
       stars: 3.5,
@@ -142,15 +118,6 @@ async function seedClubs(){
       league: 'ekstraklasa',
       logo: '/clubLogos/rakow'
      },
-     
-     {
-      club: 'Toulouse',
-      stars: 3.5,
-      competition: 'UEL',
-      leagueName: 'Ligue 1',
-      league: 'ligue-1',
-      logo: '/clubLogos/toulouse'
-     },
      {
       club: 'USG',
       stars: 3,
@@ -159,15 +126,6 @@ async function seedClubs(){
       league: 'belgian-pro-league',
       logo: '/clubLogos/usg'
      },
-     {
-      club: 'Rennes',
-      stars: 4,
-      competition: 'UEL',
-      leagueName: 'Ligue 1',
-      league: 'ligue-1',
-      logo: '/clubLogos/rennes'
-     },
-    
      {
       club: 'Molde',
       stars: 2.5,
@@ -187,14 +145,7 @@ async function seedClubs(){
 
 
 
-     {
-      club: 'Lille',
-      stars: 4,
-      competition: 'UECL',
-      leagueName: 'Ligue 1',
-      league: 'ligue-1',
-      logo: '/clubLogos/lille'
-     },
+   
      {
       club: 'Gent',
       stars: 3.5,
@@ -227,8 +178,6 @@ async function seedClubs(){
       league: 'super-lig',
       logo: '/clubLogos/besiktas'
      },
-    
-    
      {
       club: 'Legia',
       stars: 2.5,
@@ -277,7 +226,8 @@ async function seedClubs(){
         ...seriea,
         ...premierLeague,
         ...swissSuperLeague,
-        
+        ...ligue1,
+
     ];
 
     for (const doc of docs){
