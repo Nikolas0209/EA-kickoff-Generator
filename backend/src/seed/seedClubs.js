@@ -5,6 +5,7 @@ import { laliga } from './leagues/laliga.js';
 import { ligue1 } from './leagues/ligue1.js';
 import { premierDivision } from './leagues/premierDivision.js';
 import { premierLeague } from './leagues/premierLeague.js';
+import { proLeague } from './leagues/proLeague.js';
 import { restOfWorld } from './leagues/restOfWorld.js';
 import { scottishPremiership } from './leagues/scottishPremiership.js';
 import { seriea } from './leagues/seriea.js';
@@ -38,7 +39,6 @@ async function seedClubs(){
       league: 'super-lig',
       logo: '/clubLogos/galatasaray'
      },
-   
      {
       club: 'PSV',
       stars: 4,
@@ -71,14 +71,6 @@ async function seedClubs(){
       leagueName: 'Liga Portugal',
       league: 'liga-portugal',
       logo: '/clubLogos/porto'
-     },
-     {
-      club: 'Royal Antwerp',
-      stars: 3.5,
-      competition: 'UCL',
-      leagueName: 'Belgian Pro League',
-      league: 'belgian-pro-league',
-      logo: '/clubLogos/royal_antwerp'
      },
      {
       club: 'Feyenoord',
@@ -119,14 +111,6 @@ async function seedClubs(){
       logo: '/clubLogos/rakow'
      },
      {
-      club: 'USG',
-      stars: 3,
-      competition: 'UEL',
-      leagueName: 'Belgian Pro League',
-      league: 'belgian-pro-league',
-      logo: '/clubLogos/usg'
-     },
-     {
       club: 'Molde',
       stars: 2.5,
       competition: 'UEL',
@@ -145,23 +129,7 @@ async function seedClubs(){
 
 
 
-   
-     {
-      club: 'Gent',
-      stars: 3.5,
-      competition: 'UECL',
-      leagueName: 'Belgian Pro League',
-      league: 'belgian-pro-league',
-      logo: '/clubLogos/gent'
-     },
-     {
-      club: 'Club Brugge',
-      stars: 3.5,
-      competition: 'UECL',
-      leagueName: 'Belgian Pro League',
-      league: 'belgian-pro-league',
-      logo: '/clubLogos/club_brugge'
-     },
+    
      {
       club: 'Bodø/Glimt',
       stars: 3,
@@ -194,14 +162,7 @@ async function seedClubs(){
       league: 'eredivisie',
       logo: '/clubLogos/az'
      },
-     {
-      club: 'Genk',
-      stars: 3.5,
-      competition: 'UECL',
-      leagueName: 'Belgian Pro League',
-      league: 'belgian-pro-league',
-      logo: '/clubLogos/genk'
-     },
+ 
      {
       club: 'Fenerbahçe',
       stars: 4,
@@ -227,6 +188,7 @@ async function seedClubs(){
         ...premierLeague,
         ...swissSuperLeague,
         ...ligue1,
+        ...proLeague,
 
     ];
 
