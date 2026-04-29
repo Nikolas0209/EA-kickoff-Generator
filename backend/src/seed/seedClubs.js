@@ -12,6 +12,7 @@ import { proLeague } from './leagues/proLeague.js';
 import { restOfWorld } from './leagues/restOfWorld.js';
 import { scottishPremiership } from './leagues/scottishPremiership.js';
 import { seriea } from './leagues/seriea.js';
+import { superLig } from './leagues/superLig.js';
 import { swissSuperLeague } from './leagues/swissSuperLeague.js';
 
 async function seedClubs(){
@@ -27,14 +28,7 @@ async function seedClubs(){
 
     const docs = [
     
-     {
-      club: 'Galatasaray',
-      stars: 4,
-      competition: 'UCL',
-      leagueName: 'Süper Lig',
-      league: 'super-lig',
-      logo: '/clubLogos/galatasaray'
-     },
+    
    
     
 
@@ -77,14 +71,7 @@ async function seedClubs(){
       league: 'eliteserien',
       logo: '/clubLogos/bodo_glimt'
      },
-     {
-      club: 'Beşiktaş',
-      stars: 4,
-      competition: 'UECL',
-      leagueName: 'Süper Lig',
-      league: 'super-lig',
-      logo: '/clubLogos/besiktas'
-     },
+   
      {
       club: 'Legia',
       stars: 2.5,
@@ -93,14 +80,7 @@ async function seedClubs(){
       league: 'ekstraklasa',
       logo: '/clubLogos/legia'
      },
-     {
-      club: 'Fenerbahçe',
-      stars: 4,
-      competition: 'UECL',
-      leagueName: 'Süper Lig',
-      league: 'super-lig',
-      logo: '/clubLogos/fenerbahce'
-     },
+    
       ...austrianBundesliga, 
       ...scottishPremiership,
       ...restOfWorld,
@@ -115,6 +95,7 @@ async function seedClubs(){
       ...eredivisie,
       ...danishSuperliga,
       ...ligaPortugal,
+      ...superLig,
       
     ];
 
