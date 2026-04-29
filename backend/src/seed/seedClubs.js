@@ -1,6 +1,7 @@
 import { connectDB } from '../db.js';
 import { austrianBundesliga } from './leagues/austrianBundesliga.js';
 import { bundesliga } from './leagues/bundesliga.js';
+import { eredivisie } from './leagues/eredivisie.js';
 import { laliga } from './leagues/laliga.js';
 import { ligue1 } from './leagues/ligue1.js';
 import { premierDivision } from './leagues/premierDivision.js';
@@ -40,15 +41,6 @@ async function seedClubs(){
       logo: '/clubLogos/galatasaray'
      },
      {
-      club: 'PSV',
-      stars: 4,
-      competition: 'UCL',
-      leagueName: 'Eredivisie',
-      league: 'eredivisie',
-      logo: '/clubLogos/psv'
-     },
-    
-     {
       club: 'Braga',
       stars: 4,
       competition: 'UCL',
@@ -71,29 +63,11 @@ async function seedClubs(){
       leagueName: 'Liga Portugal',
       league: 'liga-portugal',
       logo: '/clubLogos/porto'
-     },
-     {
-      club: 'Feyenoord',
-      stars: 4,
-      competition: 'UCL',
-      leagueName: 'Eredivisie',
-      league: 'eredivisie',
-      logo: '/clubLogos/feyenoord'
-     },
+     },  
 
 
 
 
-   
-    
-     {
-      club: 'Ajax',
-      stars: 3.5,
-      competition: 'UEL',
-      leagueName: 'Eredivisie',
-      league: 'eredivisie',
-      logo: '/clubLogos/ajax'
-     },
      {
       club: 'Sporting CP',
       stars: 4,
@@ -155,15 +129,6 @@ async function seedClubs(){
       logo: '/clubLogos/legia'
      },
      {
-      club: 'AZ',
-      stars: 3.5,
-      competition: 'UECL',
-      leagueName: 'Eredivisie',
-      league: 'eredivisie',
-      logo: '/clubLogos/az'
-     },
- 
-     {
       club: 'Fenerbahçe',
       stars: 4,
       competition: 'UECL',
@@ -189,7 +154,8 @@ async function seedClubs(){
         ...swissSuperLeague,
         ...ligue1,
         ...proLeague,
-
+        ...eredivisie,
+        
     ];
 
     for (const doc of docs){
