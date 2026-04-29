@@ -1,6 +1,7 @@
 import { connectDB } from '../db.js';
 import { austrianBundesliga } from './leagues/austrianBundesliga.js';
 import { bundesliga } from './leagues/bundesliga.js';
+import { danishSuperliga } from './leagues/danishSuperliga.js';
 import { eredivisie } from './leagues/eredivisie.js';
 import { laliga } from './leagues/laliga.js';
 import { ligue1 } from './leagues/ligue1.js';
@@ -24,14 +25,7 @@ async function seedClubs(){
     const clubs = db.collection('clubs');
 
     const docs = [
-     {
-      club: 'København',
-      stars: 3.5,
-      competition: 'UCL',
-      leagueName: 'Danish Superliga',
-      league: 'danish-superliga',
-      logo: '/clubLogos/kobenhagen'
-     },
+    
      {
       club: 'Galatasaray',
       stars: 4,
@@ -64,7 +58,6 @@ async function seedClubs(){
       league: 'liga-portugal',
       logo: '/clubLogos/porto'
      },  
-
 
 
 
@@ -136,26 +129,20 @@ async function seedClubs(){
       league: 'super-lig',
       logo: '/clubLogos/fenerbahce'
      },
-     {
-      club: 'Nordsjælland',
-      stars: 2.5,
-      competition: 'UECL',
-      leagueName: 'Danish Superliga',
-      league: 'danish-superliga',
-      logo: '/clubLogos/nordsjaelland'
-     }, ...austrianBundesliga, 
-        ...scottishPremiership,
-        ...restOfWorld,
-        ...premierDivision,
-        ...laliga,
-        ...bundesliga,
-        ...seriea,
-        ...premierLeague,
-        ...swissSuperLeague,
-        ...ligue1,
-        ...proLeague,
-        ...eredivisie,
-        
+      ...austrianBundesliga, 
+      ...scottishPremiership,
+      ...restOfWorld,
+      ...premierDivision,
+      ...laliga,
+      ...bundesliga,
+      ...seriea,
+      ...premierLeague,
+      ...swissSuperLeague,
+      ...ligue1,
+      ...proLeague,
+      ...eredivisie,
+      ...danishSuperliga,
+
     ];
 
     for (const doc of docs){
