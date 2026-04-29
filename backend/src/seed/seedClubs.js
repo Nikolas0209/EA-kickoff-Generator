@@ -13,6 +13,7 @@ import { restOfWorld } from './leagues/restOfWorld.js';
 import { scottishPremiership } from './leagues/scottishPremiership.js';
 import { seriea } from './leagues/seriea.js';
 import { superLig } from './leagues/superLig.js';
+import { superLigaRomaniei } from './leagues/superLigaRomaniei.js';
 import { swissSuperLeague } from './leagues/swissSuperLeague.js';
 
 async function seedClubs(){
@@ -96,6 +97,7 @@ async function seedClubs(){
       ...danishSuperliga,
       ...ligaPortugal,
       ...superLig,
+      ...superLigaRomaniei,
       
     ];
 
