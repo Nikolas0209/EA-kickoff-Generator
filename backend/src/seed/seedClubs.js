@@ -1,4 +1,5 @@
 import { connectDB } from '../db.js';
+import { allsvenskan } from './leagues/allsvenskan.js';
 import { austrianBundesliga } from './leagues/austrianBundesliga.js';
 import { bundesliga } from './leagues/bundesliga.js';
 import { danishSuperliga } from './leagues/danishSuperliga.js';
@@ -37,17 +38,7 @@ async function seedClubs(){
       league: 'ekstraklasa',
       logo: '/clubLogos/rakow'
      },
-     {
-      club: 'Häcken',
-      stars: 3,
-      competition: 'UEL',
-      leagueName: 'Allsvenskan',
-      league: 'allsvenskan',
-      logo: '/clubLogos/hacken'
-     },
-
-
-     
+         
      {
       club: 'Legia',
       stars: 2.5,
@@ -74,7 +65,8 @@ async function seedClubs(){
       ...superLig,
       ...superLigaRomaniei,
       ...eliteserien,
-
+      ...allsvenskan,
+      
     ];
 
     for (const doc of docs){
