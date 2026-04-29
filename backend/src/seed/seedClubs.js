@@ -2,6 +2,7 @@ import { connectDB } from '../db.js';
 import { austrianBundesliga } from './leagues/austrianBundesliga.js';
 import { bundesliga } from './leagues/bundesliga.js';
 import { danishSuperliga } from './leagues/danishSuperliga.js';
+import { eliteserien } from './leagues/eliteserien.js';
 import { eredivisie } from './leagues/eredivisie.js';
 import { laliga } from './leagues/laliga.js';
 import { ligaPortugal } from './leagues/ligaPortugal.js';
@@ -28,14 +29,6 @@ async function seedClubs(){
     const clubs = db.collection('clubs');
 
     const docs = [
-    
-    
-   
-    
-
-
-
-    
      {
       club: 'Rakow',
       stars: 3,
@@ -43,14 +36,6 @@ async function seedClubs(){
       leagueName: 'Ekstraklasa',
       league: 'ekstraklasa',
       logo: '/clubLogos/rakow'
-     },
-     {
-      club: 'Molde',
-      stars: 2.5,
-      competition: 'UEL',
-      leagueName: 'Eliteserien',
-      league: 'eliteserien',
-      logo: '/clubLogos/molde'
      },
      {
       club: 'Häcken',
@@ -62,17 +47,7 @@ async function seedClubs(){
      },
 
 
-
-    
-     {
-      club: 'Bodø/Glimt',
-      stars: 3,
-      competition: 'UECL',
-      leagueName: 'Eliteserien',
-      league: 'eliteserien',
-      logo: '/clubLogos/bodo_glimt'
-     },
-   
+     
      {
       club: 'Legia',
       stars: 2.5,
@@ -98,7 +73,8 @@ async function seedClubs(){
       ...ligaPortugal,
       ...superLig,
       ...superLigaRomaniei,
-      
+      ...eliteserien,
+
     ];
 
     for (const doc of docs){
