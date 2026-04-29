@@ -31,9 +31,6 @@ export const eredivisie = [
   league: 'eredivisie',
   logo: '/clubLogos/az'
  },
-
-
- 
  {
   club: 'Twente',
   stars: 3.5,

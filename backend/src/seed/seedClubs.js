@@ -4,6 +4,7 @@ import { bundesliga } from './leagues/bundesliga.js';
 import { danishSuperliga } from './leagues/danishSuperliga.js';
 import { eredivisie } from './leagues/eredivisie.js';
 import { laliga } from './leagues/laliga.js';
+import { ligaPortugal } from './leagues/ligaPortugal.js';
 import { ligue1 } from './leagues/ligue1.js';
 import { premierDivision } from './leagues/premierDivision.js';
 import { premierLeague } from './leagues/premierLeague.js';
@@ -34,41 +35,12 @@ async function seedClubs(){
       league: 'super-lig',
       logo: '/clubLogos/galatasaray'
      },
-     {
-      club: 'Braga',
-      stars: 4,
-      competition: 'UCL',
-      leagueName: 'Liga Portugal',
-      league: 'liga-portugal',
-      logo: '/clubLogos/braga'
-     },
-     {
-      club: 'Benfica',
-      stars: 4.5,
-      competition: 'UCL',
-      leagueName: 'Liga Portugal',
-      league: 'liga-portugal',
-      logo: '/clubLogos/benfica'
-     },
-     {
-      club: 'Porto',
-      stars: 4,
-      competition: 'UCL',
-      leagueName: 'Liga Portugal',
-      league: 'liga-portugal',
-      logo: '/clubLogos/porto'
-     },  
+   
+    
 
 
 
-     {
-      club: 'Sporting CP',
-      stars: 4,
-      competition: 'UEL',
-      leagueName: 'Liga Portugal',
-      league: 'liga-portugal',
-      logo: '/clubLogos/sporting_CP'
-     },
+    
      {
       club: 'Rakow',
       stars: 3,
@@ -142,7 +114,8 @@ async function seedClubs(){
       ...proLeague,
       ...eredivisie,
       ...danishSuperliga,
-
+      ...ligaPortugal,
+      
     ];
 
     for (const doc of docs){
