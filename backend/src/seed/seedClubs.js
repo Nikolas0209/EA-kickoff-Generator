@@ -15,6 +15,7 @@ import { premierDivision } from './leagues/premierDivision.js';
 import { premierLeague } from './leagues/premierLeague.js';
 import { proLeague } from './leagues/proLeague.js';
 import { restOfWorld } from './leagues/restOfWorld.js';
+import { saudiProLeague } from './leagues/saudiProLeague.js';
 import { scottishPremiership } from './leagues/scottishPremiership.js';
 import { seriea } from './leagues/seriea.js';
 import { superLig } from './leagues/superLig.js';
@@ -54,7 +55,9 @@ async function seedClubs(){
       ...aLeague,
       ...ekstraklasa,
       ...ligue2,
+      ...saudiProLeague,
       
+
     ];
 
     for (const doc of docs){
