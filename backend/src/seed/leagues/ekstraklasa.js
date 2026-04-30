@@ -15,8 +15,6 @@ export const ekstraklasa = [
   league: 'ekstraklasa',
   logo: '/clubLogos/legia'
  },
-
-
  {
   club: 'Jagiellonia',
   stars: 2,

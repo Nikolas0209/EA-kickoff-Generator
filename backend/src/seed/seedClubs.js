@@ -10,6 +10,7 @@ import { eredivisie } from './leagues/eredivisie.js';
 import { laliga } from './leagues/laliga.js';
 import { ligaPortugal } from './leagues/ligaPortugal.js';
 import { ligue1 } from './leagues/ligue1.js';
+import { ligue2 } from './leagues/ligue2.js';
 import { premierDivision } from './leagues/premierDivision.js';
 import { premierLeague } from './leagues/premierLeague.js';
 import { proLeague } from './leagues/proLeague.js';
@@ -52,6 +53,7 @@ async function seedClubs(){
       ...allsvenskan,
       ...aLeague,
       ...ekstraklasa,
+      ...ligue2,
       
     ];
 
