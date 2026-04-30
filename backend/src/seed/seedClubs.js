@@ -1,4 +1,5 @@
 import { connectDB } from '../db.js';
+import { aLeague } from './leagues/aLeague.js';
 import { allsvenskan } from './leagues/allsvenskan.js';
 import { austrianBundesliga } from './leagues/austrianBundesliga.js';
 import { bundesliga } from './leagues/bundesliga.js';
@@ -66,7 +67,7 @@ async function seedClubs(){
       ...superLigaRomaniei,
       ...eliteserien,
       ...allsvenskan,
-      
+      ...aLeague,
     ];
 
     for (const doc of docs){
