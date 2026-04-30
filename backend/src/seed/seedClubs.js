@@ -7,6 +7,7 @@ import { danishSuperliga } from './leagues/danishSuperliga.js';
 import { ekstraklasa } from './leagues/ekstraklasa.js';
 import { eliteserien } from './leagues/eliteserien.js';
 import { eredivisie } from './leagues/eredivisie.js';
+import { kLeague1 } from './leagues/kLeague1.js';
 import { laliga } from './leagues/laliga.js';
 import { ligaPortugal } from './leagues/ligaPortugal.js';
 import { ligue1 } from './leagues/ligue1.js';
@@ -56,7 +57,7 @@ async function seedClubs(){
       ...ekstraklasa,
       ...ligue2,
       ...saudiProLeague,
-      
+      ...kLeague1,
 
     ];
 
