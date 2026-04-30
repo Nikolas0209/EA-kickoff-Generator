@@ -4,6 +4,7 @@ import { allsvenskan } from './leagues/allsvenskan.js';
 import { austrianBundesliga } from './leagues/austrianBundesliga.js';
 import { bundesliga } from './leagues/bundesliga.js';
 import { danishSuperliga } from './leagues/danishSuperliga.js';
+import { ekstraklasa } from './leagues/ekstraklasa.js';
 import { eliteserien } from './leagues/eliteserien.js';
 import { eredivisie } from './leagues/eredivisie.js';
 import { laliga } from './leagues/laliga.js';
@@ -31,24 +32,6 @@ async function seedClubs(){
     const clubs = db.collection('clubs');
 
     const docs = [
-     {
-      club: 'Rakow',
-      stars: 3,
-      competition: 'UEL',
-      leagueName: 'Ekstraklasa',
-      league: 'ekstraklasa',
-      logo: '/clubLogos/rakow'
-     },
-         
-     {
-      club: 'Legia',
-      stars: 2.5,
-      competition: 'UECL',
-      leagueName: 'Ekstraklasa',
-      league: 'ekstraklasa',
-      logo: '/clubLogos/legia'
-     },
-    
       ...austrianBundesliga, 
       ...scottishPremiership,
       ...restOfWorld,
@@ -68,6 +51,8 @@ async function seedClubs(){
       ...eliteserien,
       ...allsvenskan,
       ...aLeague,
+      ...ekstraklasa,
+      
     ];
 
     for (const doc of docs){
