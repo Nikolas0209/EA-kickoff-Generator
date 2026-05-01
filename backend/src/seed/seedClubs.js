@@ -19,6 +19,7 @@ import { restOfWorld } from './leagues/restOfWorld.js';
 import { saudiProLeague } from './leagues/saudiProLeague.js';
 import { scottishPremiership } from './leagues/scottishPremiership.js';
 import { seriea } from './leagues/seriea.js';
+import { serieb } from './leagues/serieb.js';
 import { superLig } from './leagues/superLig.js';
 import { superLigaRomaniei } from './leagues/superLigaRomaniei.js';
 import { swissSuperLeague } from './leagues/swissSuperLeague.js';
@@ -58,6 +59,7 @@ async function seedClubs(){
       ...ligue2,
       ...saudiProLeague,
       ...kLeague1,
+      ...serieb,
 
     ];
 
