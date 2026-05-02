@@ -11,6 +11,7 @@ import { eredivisie } from './leagues/eredivisie.js';
 import { indianSuperLeague } from './leagues/indianSuperLeague.js';
 import { kLeague1 } from './leagues/kLeague1.js';
 import { laliga } from './leagues/laliga.js';
+import { laliga2 } from './leagues/laliga2.js';
 import { ligaPortugal } from './leagues/ligaPortugal.js';
 import { ligue1 } from './leagues/ligue1.js';
 import { ligue2 } from './leagues/ligue2.js';
@@ -64,6 +65,7 @@ async function seedClubs(){
       ...serieb,
       ...indianSuperLeague,
       ...chineseSuperLeague,
+      ...laliga2,
 
     ];
 
