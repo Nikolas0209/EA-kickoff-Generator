@@ -3,6 +3,7 @@ import { aLeague } from './leagues/aLeague.js';
 import { allsvenskan } from './leagues/allsvenskan.js';
 import { austrianBundesliga } from './leagues/austrianBundesliga.js';
 import { bundesliga } from './leagues/bundesliga.js';
+import { bundesliga2 } from './leagues/bundesliga2.js';
 import { chineseSuperLeague } from './leagues/chineseSuperLeague.js';
 import { danishSuperliga } from './leagues/danishSuperliga.js';
 import { ekstraklasa } from './leagues/ekstraklasa.js';
@@ -66,6 +67,7 @@ async function seedClubs(){
       ...indianSuperLeague,
       ...chineseSuperLeague,
       ...laliga2,
+      ...bundesliga2,
 
     ];
 
