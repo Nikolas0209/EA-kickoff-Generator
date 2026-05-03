@@ -29,6 +29,7 @@ import { superLig } from './leagues/superLig.js';
 import { superLigaRomaniei } from './leagues/superLigaRomaniei.js';
 import { swissSuperLeague } from './leagues/swissSuperLeague.js';
 import { championship } from './leagues/championship.js';
+import { leagueOne } from './leagues/leagueOne.js';
 
 async function seedClubs(){
   let db;
@@ -72,6 +73,7 @@ async function seedClubs(){
       ...bundesliga2,
       ...dritteLiga,
       ...championship,
+      ...leagueOne,
       
     ];
 
