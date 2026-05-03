@@ -1,4 +1,5 @@
 import { connectDB } from '../db.js';
+import { dritteLiga } from './leagues/dritteLiga.js';
 import { aLeague } from './leagues/aLeague.js';
 import { allsvenskan } from './leagues/allsvenskan.js';
 import { austrianBundesliga } from './leagues/austrianBundesliga.js';
@@ -68,7 +69,8 @@ async function seedClubs(){
       ...chineseSuperLeague,
       ...laliga2,
       ...bundesliga2,
-
+      ...dritteLiga,
+      
     ];
 
     for (const doc of docs){
