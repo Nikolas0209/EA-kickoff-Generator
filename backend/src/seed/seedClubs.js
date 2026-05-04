@@ -32,6 +32,7 @@ import { championship } from './leagues/championship.js';
 import { leagueOne } from './leagues/leagueOne.js';
 import { leagueTwo } from './leagues/leagueTwo.js';
 import { mls } from './leagues/mls.js';
+import { ligaProfesionaldeFutbol } from './leagues/ligaProfesionalDeFutbol.js';
 
 async function seedClubs(){
   let db;
@@ -78,7 +79,7 @@ async function seedClubs(){
       ...leagueOne,
       ...leagueTwo,
       ...mls,
-      
+      ...ligaProfesionaldeFutbol
     ];
 
     for (const doc of docs){
