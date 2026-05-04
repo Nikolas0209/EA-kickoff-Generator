@@ -31,6 +31,7 @@ import { swissSuperLeague } from './leagues/swissSuperLeague.js';
 import { championship } from './leagues/championship.js';
 import { leagueOne } from './leagues/leagueOne.js';
 import { leagueTwo } from './leagues/leagueTwo.js';
+import { mls } from './leagues/mls.js';
 
 async function seedClubs(){
   let db;
@@ -76,6 +77,7 @@ async function seedClubs(){
       ...championship,
       ...leagueOne,
       ...leagueTwo,
+      ...mls,
       
     ];
 
