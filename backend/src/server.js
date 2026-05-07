@@ -10,8 +10,8 @@ const __dirname = path.dirname(__filename);
 
 app.use('/countries', countriesRoutes);
 app.use('/clubs', clubRoutes);
-app.use('/clubLogos', express.static(path.join(__dirname, 'assets/clubLogos')));
-
+app.use('/assets', express.static(path.join(__dirname, 'assets')));
+ 
 app.listen(3000, () => {
   console.log('Server running on port 3000');
 });
