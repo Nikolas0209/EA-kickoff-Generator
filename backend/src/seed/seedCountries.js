@@ -15,132 +15,132 @@ async function seedCountries(){
       {
         country: 'Argentina',
         stars: 5,
-        logo: 'https://upload.wikimedia.org/wikipedia/en/c/c1/Argentina_national_football_team_logo.svg'
+        logo: '/countryLogos/argentina'
       },
       {
         country: 'Spain',
         stars: 5,
-        logo: 'https://en.wikipedia.org/wiki/Spain_national_football_team#/media/File:Spain_national_football_team_crest.svg'
+        logo: '/contryLogos/spain'
       },
       {
         country: 'Italy',
         stars: 5,
-        logo: 'https://en.wikipedia.org/wiki/Italy_national_football_team#/media/File:Logo_Italy_National_Football_Team_-_2023.svg'
+        logo: '/countryLogos/italy'
       },
       {
         country: 'The Netherlands',
         stars: 4.5,
-        logo: 'https://en.wikipedia.org/wiki/Netherlands_national_football_team#/media/File:Netherlands_national_football_team_logo.svg'
+        logo: '/countryLogos/the_netherlands'
       },
       {
         country: 'Belgium',
         stars: 4.5,
-        logo: 'https://en.wikipedia.org/wiki/Belgium_national_football_team#/media/File:Royal_Belgian_FA_logo_2019.svg'
+        logo: '/countryLogos/belgium'
       },
       {
         country: 'Croatia',
         stars: 4.5,
-        logo: 'https://en.wikipedia.org/wiki/Croatian_Football_Federation#/media/File:Croatian_Football_Federation_logo.svg'
+        logo: '/countryLogos/croatia'
       },
       {
         country: 'Denmark',
         stars: 4.5,
-        logo: 'https://en.wikipedia.org/wiki/Denmark_national_football_team#/media/File:Dansk_boldspil_union_logo.svg'
+        logo: '/countryLogos/denmark'
       },
       {
         country: 'Poland',
         stars: 4,
-        logo: 'https://en.wikipedia.org/wiki/Poland_national_football_team#/media/File:Herb_Polski.svg'
+        logo: '/countryLogos/poland'
       },
       {
         country: 'Morocco',
         stars: 4,
-        logo: 'https://en.wikipedia.org/wiki/Morocco_national_football_team#/media/File:Royal_Moroccan_Football_Federation_logo.svg'
+        logo: '/countryLogos/morocco'
       },
       {
         country: 'Mexico',
         stars: 4,
-        logo: 'https://en.wikipedia.org/wiki/Mexico_national_football_team#/media/File:Mexico_national_football_team_crest.svg'
+        logo: '/countryLogos/mexico'
       },
       {
         country: 'Norway',
         stars: 4,
-        logo: 'https://en.wikipedia.org/wiki/Norway_national_football_team#/media/File:Norway_national_football_team_logo.svg'
+        logo: '/countryLogos/norway'
       },
       {
         country: 'Ghana',
         stars: 4,
-        logo: 'https://en.wikipedia.org/wiki/Ghana_national_football_team#/media/File:Ghana_Football_Association_logo.png'
+        logo: '/countryLogos/ghana'
       },
       {
         country: 'Sweden',
         stars: 4,
-        logo: 'https://en.wikipedia.org/wiki/Sweden_men%27s_national_football_team#/media/File:Sweden_national_football_team_badge.svg'
+        logo: '/countryLogos/sweden'
       },
       {
         country: 'Czech Republic',
         stars: 4,
-        logo: 'https://en.wikipedia.org/wiki/Czech_Republic_national_football_team#/media/File:Czech_Republic_national_football_team_logo.svg'
+        logo: '/countryLogos/czech_republic'
       },
       {
         country: 'Ukraine',
         stars: 4,
-        logo: 'https://en.wikipedia.org/wiki/Ukraine_national_football_team#/media/File:Logo_F%C3%A9d%C3%A9ration_Ukraine_Football_2016.svg'
+        logo: '/countryLogos/ukraine'
       },
       {
         country: 'Scotland',
         stars: 4,
-        logo: 'https://en.wikipedia.org/wiki/Scotland_national_football_team#/media/File:Scotland_national_football_team_logo_2014.svg'
+        logo: '/countryLogos/scotland'
       },
       {
         country: 'United States',
         stars: 4,
-        logo: 'https://en.wikipedia.org/wiki/United_States_men%27s_national_soccer_team#/media/File:United_States_Soccer_Federation_logo.svg'
+        logo: '/countryLogos/usa'
       },
       {
         country: 'Hungary',
         stars: 3.5,
-        logo: 'https://en.wikipedia.org/wiki/Hungary_national_football_team#/media/File:Coat_of_arms_of_Hungary.svg'
+        logo: '/countryLogos/hungary'
       },
       {
         country: 'Wales',
         stars: 3.5,
-        logo: 'https://en.wikipedia.org/wiki/Wales_national_football_team#/media/File:Wales_national_football_team_logo.svg'
+        logo: '/contryLogos/wales'
       },
       {
         country: 'Republic of Ireland',
         stars: 3.5,
-        logo: 'https://en.wikipedia.org/wiki/Republic_of_Ireland_national_football_team#/media/File:Republic_of_Ireland_national_football_team_crest.svg'
+        logo: '/countryLogos/republic_of_ireland'
       },
       {
         country: 'Iceland',
         stars: 3.5,
-        logo: 'https://en.wikipedia.org/wiki/Iceland_national_football_team#/media/File:Iceland_national_football_team_logo.svg'
+        logo: '/countryLogos/iceland'
       },
       {
         country: 'Romania',
         stars: 3.5,
-        logo: 'https://en.wikipedia.org/wiki/Romania_national_football_team#/media/File:Romania_national_football_team_logo.svg'
+        logo: '/countryLogos/romania'
       },
       {
         country: 'Finland',
         stars: 3,
-        logo: 'https://en.wikipedia.org/wiki/Finland_national_football_team#/media/File:Finland_national_football_team_crest.png'
+        logo: '/countryLogos/finland'
       },
       {
         country: 'Northern Ireland',
         stars: 3,
-        logo: 'https://en.wikipedia.org/wiki/Irish_Football_Association#/media/File:Irish_Football_Association_logo.svg'
+        logo: '/countryLogos/northern_ireland'
       },
       {
         country: 'Qatar',
         stars: 2.5,
-        logo: 'https://en.wikipedia.org/wiki/Qatar_Football_Association#/media/File:Qatar_Football_Association_logo.svg'
+        logo: '/countryLogos/qatar'
       },
       {
         country: 'New Zealand',
         stars: 2.5,
-        logo: 'https://en.wikipedia.org/wiki/New_Zealand_men%27s_national_football_team#/media/File:New_Zealand_Football_Crest_2022.svg'
+        logo: '/countryLogos/new_zealand'
       }
     ];
 
